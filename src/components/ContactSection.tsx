@@ -47,7 +47,7 @@ const ContactSection = () => {
               {[
                 { icon: MapPin, label: "Studio Location", value: "123 Elegance Avenue, Suite 200\nLos Angeles, CA 90012" },
                 { icon: Phone, label: "Phone", value: "(555) 123-4567" },
-                { icon: Mail, label: "Email", value: "hello@johndoenails.com" },
+                { icon: Mail, label: "Email", value: "hello@hernails.com" },
                 { icon: Clock, label: "Hours", value: "Mon–Sat: 9AM – 7PM\nSun: By Appointment Only" },
               ].map((item) => (
                 <div key={item.label} className="flex gap-4">
