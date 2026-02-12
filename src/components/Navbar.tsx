@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -27,21 +27,22 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-glass shadow-soft py-3" : "bg-transparent py-6"
+        scrolled ? "bg-glass shadow-soft py-3" : "bg-transparent py-5"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-6">
-        <a href="#home" className="font-display text-2xl font-semibold tracking-wide text-foreground">
-          Her
+        <a href="#home" className="flex items-center gap-2">
+          <span className="font-display text-3xl tracking-wider text-foreground">EMERGENCY</span>
+          <span className="font-display text-3xl tracking-wider text-primary">ROADSIDE</span>
         </a>
 
         {/* Desktop */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="font-body text-sm font-medium tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
+                className="font-body text-xs font-semibold tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
               >
                 {link.label}
               </a>
@@ -50,16 +51,17 @@ const Navbar = () => {
         </ul>
 
         <a
-          href="#contact"
-          className="hidden md:inline-flex rounded-full bg-primary px-6 py-2.5 font-body text-xs font-semibold uppercase tracking-widest text-primary-foreground transition-all duration-300 hover:shadow-glow hover:scale-105"
+          href="tel:7736802671"
+          className="hidden lg:inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 font-body text-sm font-bold text-primary-foreground transition-all duration-300 hover:shadow-glow pulse-emergency"
         >
-          Book Now
+          <Phone className="w-4 h-4" />
+          (773) 680-2671
         </a>
 
         {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-foreground"
+          className="lg:hidden text-foreground"
           aria-label="Toggle menu"
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -73,7 +75,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-glass border-t border-border"
+            className="lg:hidden bg-glass border-t border-border"
           >
             <ul className="flex flex-col items-center gap-6 py-8">
               {navLinks.map((link) => (
@@ -81,18 +83,19 @@ const Navbar = () => {
                   <a
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="font-body text-sm font-medium tracking-widest uppercase text-foreground hover:text-primary transition-colors"
+                    className="font-body text-sm font-semibold tracking-widest uppercase text-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
                   </a>
                 </li>
               ))}
               <a
-                href="#contact"
+                href="tel:7736802671"
                 onClick={() => setMobileOpen(false)}
-                className="rounded-full bg-primary px-6 py-2.5 font-body text-xs font-semibold uppercase tracking-widest text-primary-foreground"
+                className="flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-body text-sm font-bold text-primary-foreground pulse-emergency"
               >
-                Book Now
+                <Phone className="w-4 h-4" />
+                (773) 680-2671
               </a>
             </ul>
           </motion.div>

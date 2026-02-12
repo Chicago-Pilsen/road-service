@@ -1,17 +1,17 @@
 import { motion } from "framer-motion";
-import { Award, Clock, Heart, Users } from "lucide-react";
-import aboutPortrait from "@/assets/about-portrait.jpg";
+import { Award, Clock, Shield, Truck } from "lucide-react";
+import aboutImage from "@/assets/about-mechanic.jpg";
 
 const stats = [
-  { icon: Clock, value: "10+", label: "Years Experience" },
-  { icon: Users, value: "5,000+", label: "Happy Clients" },
-  { icon: Award, value: "15+", label: "Awards Won" },
-  { icon: Heart, value: "100%", label: "Passion Driven" },
+  { icon: Clock, value: "15+", label: "Years Experience" },
+  { icon: Truck, value: "50,000+", label: "Roadside Rescues" },
+  { icon: Award, value: "4.9★", label: "Customer Rating" },
+  { icon: Shield, value: "100%", label: "Licensed & Insured" },
 ];
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 md:py-32 bg-gradient-rose">
+    <section id="about" className="py-24 md:py-32 bg-gradient-steel">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Image */}
@@ -22,17 +22,15 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-elevated">
+            <div className="relative rounded-xl overflow-hidden shadow-elevated border border-border">
               <img
-                src={aboutPortrait}
-                alt="Her, nail technician"
+                src={aboutImage}
+                alt="Professional roadside mechanic"
                 className="w-full h-[500px] lg:h-[600px] object-cover"
                 loading="lazy"
               />
             </div>
-            {/* Decorative element */}
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-2xl border-2 border-rose-gold/30 -z-10" />
-            <div className="absolute -top-4 -left-4 w-24 h-24 rounded-2xl bg-blush -z-10" />
+            <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-xl border-2 border-primary/30 -z-10" />
           </motion.div>
 
           {/* Content */}
@@ -42,41 +40,38 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <p className="font-body text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-3">
-              About Me
+            <p className="font-body text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3">
+              About Us
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-light text-foreground mb-6">
-              Meet <span className="italic font-semibold">Her</span>
+            <h2 className="font-display text-5xl md:text-6xl text-foreground mb-6 tracking-wide">
+              WHY CHOOSE US
             </h2>
-            <div className="divider-rose w-16 mb-8" />
+            <div className="divider-amber w-16 mb-8" />
 
             <p className="font-body text-sm text-muted-foreground leading-relaxed mb-4">
-              With over a decade of experience in the nail industry, I've transformed 
-              nail artistry into an elevated form of self-expression. My journey began 
-              in a small salon and has grown into a renowned practice known for 
-              pushing creative boundaries.
+              With over 15 years serving the Chicagoland area, Emergency Roadside Repairs 
+              is the name drivers trust when they're stuck. We've built our reputation on 
+              fast response times, honest pricing, and getting the job done right — every time.
             </p>
             <p className="font-body text-sm text-muted-foreground leading-relaxed mb-4">
-              Certified by the International Nail Technicians Association and trained 
-              in Japan's precision nail art techniques, I bring a global perspective 
-              to every design. From minimalist elegance to extravagant showpieces, 
-              each nail tells a story.
+              Our team of ASE-certified technicians arrives fully equipped with professional-grade 
+              tools, jump packs, air compressors, and common replacement parts. We handle everything 
+              from flat tires and dead batteries to lockouts and emergency towing.
             </p>
             <p className="font-body text-sm text-muted-foreground leading-relaxed mb-8">
-              I use only premium, cruelty-free products and maintain the highest 
-              standards of hygiene. Your comfort, safety, and satisfaction are 
-              always my top priorities.
+              Available 24 hours a day, 7 days a week, 365 days a year — because breakdowns 
+              don't wait for business hours. Call us anytime at <a href="tel:7736802671" className="text-primary font-semibold hover:underline">(773) 680-2671</a>.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
               {stats.map((stat) => (
                 <div key={stat.label} className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-blush flex items-center justify-center flex-shrink-0">
-                    <stat.icon className="w-4 h-4 text-primary" />
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <stat.icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-display text-2xl font-bold text-foreground">{stat.value}</p>
+                    <p className="font-display text-3xl text-foreground">{stat.value}</p>
                     <p className="font-body text-xs text-muted-foreground tracking-wide">{stat.label}</p>
                   </div>
                 </div>

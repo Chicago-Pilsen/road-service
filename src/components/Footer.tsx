@@ -1,25 +1,24 @@
+import { Phone } from "lucide-react";
+
 const Footer = () => {
   return (
-    <footer className="bg-foreground py-12">
+    <footer className="bg-card border-t border-border py-12">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="font-display text-xl font-semibold text-cream">
-            Her
-          </p>
-          <p className="font-body text-xs text-champagne/50 tracking-wide">
-            © 2026 Her Nail Artistry. All rights reserved.
-          </p>
-          <div className="flex gap-6">
-            {["Instagram", "TikTok", "Pinterest"].map((s) => (
-              <a
-                key={s}
-                href="#"
-                className="font-body text-xs text-champagne/50 hover:text-rose-gold transition-colors tracking-wider uppercase"
-              >
-                {s}
-              </a>
-            ))}
+          <div className="flex items-center gap-2">
+            <span className="font-display text-xl tracking-wider text-foreground">EMERGENCY</span>
+            <span className="font-display text-xl tracking-wider text-primary">ROADSIDE</span>
           </div>
+          <a
+            href="tel:7736802671"
+            className="flex items-center gap-2 font-body text-sm font-bold text-primary hover:text-amber-light transition-colors"
+          >
+            <Phone className="w-4 h-4" />
+            (773) 680-2671
+          </a>
+          <p className="font-body text-xs text-muted-foreground tracking-wide">
+            © 2026 Emergency Roadside Repairs. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
