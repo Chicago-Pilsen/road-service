@@ -3,21 +3,21 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Mitchell",
-    role: "Bride",
-    text: "Her created the most stunning bridal nails I could have ever imagined. Every detail was perfect — from the delicate lace patterns to the crystal accents. My nails were the talk of the wedding!",
+    name: "Marcus Johnson",
+    role: "Stranded on I-94",
+    text: "Blew a tire on the highway at 2 AM. Called Emergency Roadside and they were there in under 25 minutes. Professional, fast, and incredibly kind. These guys are lifesavers — literally.",
     rating: 5,
   },
   {
-    name: "Emily Rodriguez",
-    role: "Regular Client",
-    text: "I've been coming to Her for over three years now and I'm consistently blown away by her artistry. She listens, she creates, and the results are always beyond expectations. True professional.",
+    name: "Sarah Williams",
+    role: "Dead Battery in Winter",
+    text: "My car wouldn't start in -10° weather. They came out, jumped my battery, and even checked my alternator to make sure I'd be okay. Honest, helpful, and affordable. Can't recommend enough!",
     rating: 5,
   },
   {
-    name: "Ava Chen",
-    role: "Fashion Influencer",
-    text: "As someone who's always in front of the camera, my nails need to be on point. Her's attention to detail and creative vision make her the only nail tech I trust. Her chrome work is unmatched.",
+    name: "David Chen",
+    role: "Locked Out at Work",
+    text: "Left my keys in the car at 6 PM on a Friday. They arrived in 20 minutes and got me in without a scratch on my car. No ridiculous upcharge for after-hours either. These are the real deal.",
     rating: 5,
   },
 ];
@@ -33,13 +33,13 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="font-body text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-3">
-            Client Love
+          <p className="font-body text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3">
+            Real Reviews
           </p>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-4">
-            Kind <span className="italic font-semibold">Words</span>
+          <h2 className="font-display text-5xl md:text-6xl lg:text-7xl text-foreground mb-4 tracking-wide">
+            WHAT DRIVERS SAY
           </h2>
-          <div className="divider-rose w-24 mx-auto mt-6" />
+          <div className="divider-amber w-24 mx-auto mt-6" />
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -50,10 +50,10 @@ const TestimonialsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15, duration: 0.6 }}
-              className="relative bg-card rounded-2xl p-8 shadow-soft"
+              className="relative bg-card rounded-xl p-8 border border-border"
             >
-              <Quote className="w-8 h-8 text-rose-gold-light mb-4" />
-              <p className="font-body text-sm text-muted-foreground leading-relaxed mb-6 italic">
+              <Quote className="w-8 h-8 text-primary/30 mb-4" />
+              <p className="font-body text-sm text-muted-foreground leading-relaxed mb-6">
                 "{t.text}"
               </p>
               <div className="flex items-center gap-1 mb-4">
@@ -62,7 +62,7 @@ const TestimonialsSection = () => {
                 ))}
               </div>
               <div>
-                <p className="font-display text-lg font-semibold text-foreground">{t.name}</p>
+                <p className="font-display text-xl text-foreground tracking-wide">{t.name}</p>
                 <p className="font-body text-xs text-muted-foreground tracking-wide">{t.role}</p>
               </div>
             </motion.div>

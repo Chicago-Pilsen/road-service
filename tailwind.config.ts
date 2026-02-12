@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Cormorant Garamond', 'serif'],
-        body: ['Montserrat', 'sans-serif'],
+        display: ['Bebas Neue', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,12 +51,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        "rose-gold": "hsl(var(--rose-gold))",
-        "rose-gold-light": "hsl(var(--rose-gold-light))",
-        cream: "hsl(var(--cream))",
-        champagne: "hsl(var(--champagne))",
-        blush: "hsl(var(--blush))",
-        "deep-rose": "hsl(var(--deep-rose))",
+        amber: "hsl(var(--amber))",
+        "amber-light": "hsl(var(--amber-light))",
+        steel: "hsl(var(--steel))",
+        "steel-light": "hsl(var(--steel-light))",
+        dark: "hsl(var(--dark))",
+        "dark-card": "hsl(var(--dark-card))",
+        "warning-red": "hsl(var(--warning-red))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
