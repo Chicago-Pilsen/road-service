@@ -32,7 +32,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between px-6">
         <a href="#home" className="font-display text-2xl font-semibold tracking-wide text-foreground">
-          John <span className="text-gradient-gold">Doe</span>
+          Her
         </a>
 
         {/* Desktop */}

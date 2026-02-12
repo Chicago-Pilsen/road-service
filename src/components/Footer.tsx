@@ -4,10 +4,10 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="font-display text-xl font-semibold text-cream">
-            John <span className="text-rose-gold">Doe</span>
+            Her
           </p>
           <p className="font-body text-xs text-champagne/50 tracking-wide">
-            © 2026 John Doe Nail Artistry. All rights reserved.
+            © 2026 Her Nail Artistry. All rights reserved.
           </p>
           <div className="flex gap-6">
             {["Instagram", "TikTok", "Pinterest"].map((s) => (

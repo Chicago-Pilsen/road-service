@@ -5,19 +5,19 @@ const testimonials = [
   {
     name: "Sarah Mitchell",
     role: "Bride",
-    text: "John created the most stunning bridal nails I could have ever imagined. Every detail was perfect — from the delicate lace patterns to the crystal accents. My nails were the talk of the wedding!",
+    text: "Her created the most stunning bridal nails I could have ever imagined. Every detail was perfect — from the delicate lace patterns to the crystal accents. My nails were the talk of the wedding!",
     rating: 5,
   },
   {
     name: "Emily Rodriguez",
     role: "Regular Client",
-    text: "I've been coming to John for over three years now and I'm consistently blown away by his artistry. He listens, he creates, and the results are always beyond expectations. True professional.",
+    text: "I've been coming to Her for over three years now and I'm consistently blown away by her artistry. She listens, she creates, and the results are always beyond expectations. True professional.",
     rating: 5,
   },
   {
     name: "Ava Chen",
     role: "Fashion Influencer",
-    text: "As someone who's always in front of the camera, my nails need to be on point. John's attention to detail and creative vision make him the only nail tech I trust. His chrome work is unmatched.",
+    text: "As someone who's always in front of the camera, my nails need to be on point. Her's attention to detail and creative vision make her the only nail tech I trust. Her chrome work is unmatched.",
     rating: 5,
   },
 ];

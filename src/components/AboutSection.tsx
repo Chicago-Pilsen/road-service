@@ -25,7 +25,7 @@ const AboutSection = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-elevated">
               <img
                 src={aboutPortrait}
-                alt="John Doe, nail technician"
+                alt="Her, nail technician"
                 className="w-full h-[500px] lg:h-[600px] object-cover"
                 loading="lazy"
               />
@@ -46,7 +46,7 @@ const AboutSection = () => {
               About Me
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-light text-foreground mb-6">
-              Meet <span className="italic font-semibold">John Doe</span>
+              Meet <span className="italic font-semibold">Her</span>
             </h2>
             <div className="divider-rose w-16 mb-8" />
 
